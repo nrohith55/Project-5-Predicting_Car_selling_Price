@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html >
+<!--From https://codepen.io/frytyler/pen/EGdtg-->
+<head>
+  <meta charset="UTF-8">
+  <title>ML API</title>
+  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  
+<body>
+
+	<header>
+		<div class="container">
+		<div id="brandname">
+			Machine Learning App with Flask
+		</div>
+		<h2>Predicting Car Selling Price</h2>
+		
+	</div>
+	</header>
+
+	<div class="ml-container">
+     <!-- Main Input For Receiving Query to our ML -->
+    <form action="{{ url_for('predict')}}"method="post">
+    
+    </div>
+    	<label for="Year">Car_Model_Manufacture_Year</label>
+		<input type="number" id="Year" name="Year" min="2003" max="2020">
+	</div>
+		<label for="Present_Price">Present_Price:(In lakhs)</label>
+		<input type="number" id="Present_Price" name="Present_Price" step="0.01" min="0" max="100">
+	</div>	
+		<label for="Kms_Driven">Kms_Driven:How Many Kilometers Drived?</label>
+		<input type="number" id="Kms_Driven" name="Kms_Driven" min="500" max="500000">
+    </div>
+		<label for="Fuel_Type">Fuel_Type</label>
+        <input type="text" id="Fuel_Type" name="Fuel_Type"><br><br>
+	</div>
+		<label for="Seller_Type">Seller_Type</label>
+        <input type="text" id="Seller_Type" name="Seller_Type"><br><br>
+    </div>
+		<label for="Transmission">Transmission_type</label>
+        <input type="text" id="Transmission" name="Transmission"><br><br>
+    </div>	
+		<label for="Owner">Owner</label>
+        <input type="number" id="Owner" name="Owner" min="0" max="5">
+   
+        <button type="submit" class="btn btn-primary btn-block btn-large">Calculate the Selling Price(In lakhs)</button>
+    </form>
+
+   <br>
+   <br>
+  
+	 <br><br><h3>{{ prediction }}<h3>
+
+ </div>
+
+
+</body>
+</html>
