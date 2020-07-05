@@ -1,0 +1,151 @@
+RandomForestRegressor
+
+print('MAE:', metrics.mean_absolute_error(y_test, y_pred))
+MAE: 0.7194793406593429
+
+print('MSE:', metrics.mean_squared_error(y_test, y_pred))
+MSE: 1.7927817781450597
+
+print('RMSE:', np.sqrt(metrics.mean_squared_error(y_test,y_pred)))
+RMSE: 1.3389480117409562
+
+from sklearn.model_selection import ShuffleSplit
+
+from sklearn.model_selection import cross_val_score
+
+cv = ShuffleSplit(n_splits=5, test_size=0.2, random_state=0)
+
+cross_val_score(model1, X, y, cv=cv)
+Out[237]: array([0.93301106, 0.88808766, 0.86181598, 0.73233034, 0.90403769])
+
+from sklearn.metrics import r2_score
+
+print(r2_score(y_test,y_pred))
+0.9146364967279395
+
+#############################################################################
+XGBRegressor
+print('MAE:', metrics.mean_absolute_error(y_test, y_pred1))
+MAE: 0.5887407899819888
+
+print('MSE:', metrics.mean_squared_error(y_test, y_pred1))
+MSE: 0.8339478181041489
+
+print('RMSE:', np.sqrt(metrics.mean_squared_error(y_test,y_pred1)))
+RMSE: 0.9132074343237405
+
+from sklearn.model_selection import ShuffleSplit
+
+from sklearn.model_selection import cross_val_score
+
+cv = ShuffleSplit(n_splits=5, test_size=0.2, random_state=0)
+
+cross_val_score(model3, X, y, cv=cv)
+
+Out[259]: array([0.96203466, 0.93935546, 0.94974752, 0.89983532, 0.95778652])
+
+from sklearn.metrics import r2_score
+
+print(r2_score(y_test,y_pred1))
+0.9602914821160676
+
+#######################################################################################################
+
+GradientBoostingRegressor
+
+print('MAE:', metrics.mean_absolute_error(y_test, y_pred2))
+MAE: 0.5865102499413706
+
+print('MSE:', metrics.mean_squared_error(y_test, y_pred2))
+MSE: 0.7861276758664029
+
+print('RMSE:', np.sqrt(metrics.mean_squared_error(y_test,y_pred2)))
+RMSE: 0.8866384132589806
+
+from sklearn.model_selection import ShuffleSplit
+
+from sklearn.model_selection import cross_val_score
+
+cv = ShuffleSplit(n_splits=5, test_size=0.2, random_state=0)
+
+cross_val_score(model5, X, y, cv=cv)
+Out[280]: array([0.9720071 , 0.93993759, 0.97422838, 0.93899065, 0.96333309])
+
+from sklearn.metrics import r2_score
+
+print(r2_score(y_test,y_pred2))
+0.9625684434942705
+
+#####################################################################################################
+DecisionTreeRegressor
+
+print('MAE:', metrics.mean_absolute_error(y_test, y_pred3))
+MAE: 0.6529304029304029
+
+print('MSE:', metrics.mean_squared_error(y_test, y_pred3))
+MSE: 1.2507751526251525
+
+print('RMSE:', np.sqrt(metrics.mean_squared_error(y_test,y_pred3)))
+RMSE: 1.1183805938164129
+
+from sklearn.model_selection import ShuffleSplit
+
+from sklearn.model_selection import cross_val_score
+
+cv = ShuffleSplit(n_splits=5, test_size=0.2, random_state=0)
+
+cross_val_score(model7, X, y, cv=cv)
+Out[303]: array([0.94420777, 0.91462168, 0.93393585, 0.75935416, 0.9277351 ])
+
+from sklearn.metrics import r2_score
+
+print(r2_score(y_test,y_pred3))
+0.9404442023366605
+
+######################################################################################################################
+AdaBoostRegressor
+
+print('MAE:', metrics.mean_absolute_error(y_test, y_pred3))
+MAE: 0.6529304029304029
+
+print('MSE:', metrics.mean_squared_error(y_test, y_pred3))
+MSE: 1.2507751526251525
+
+print('RMSE:', np.sqrt(metrics.mean_squared_error(y_test,y_pred3)))
+RMSE: 1.1183805938164129
+
+from sklearn.model_selection import ShuffleSplit
+
+from sklearn.model_selection import cross_val_score
+
+cv = ShuffleSplit(n_splits=5, test_size=0.2, random_state=0)
+
+cross_val_score(model9, X, y, cv=cv)
+Out[330]: array([0.93137771, 0.88714942, 0.93027897, 0.74156668, 0.89624135])
+
+from sklearn.metrics import r2_score
+
+print(r2_score(y_test,y_pred3))
+0.9404442023366605
+
+###########################################################################################################
+
+
+
+Out[237]: array([0.93301106, 0.88808766, 0.86181598, 0.73233034, 0.90403769])
+Out[259]: array([0.96203466, 0.93935546, 0.94974752, 0.89983532, 0.95778652])
+Out[280]: array([0.9720071 , 0.93993759, 0.97422838, 0.93899065, 0.96333309])
+Out[303]: array([0.94420777, 0.91462168, 0.93393585, 0.75935416, 0.9277351 ])
+Out[330]: array([0.93137771, 0.88714942, 0.93027897, 0.74156668, 0.89624135])
+
+
+
+
+
+
+
+
+
+
+
+
