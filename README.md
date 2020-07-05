@@ -1,0 +1,2 @@
+# Project-5-Predicting_Car_selling_Price
+The main aim of the project is to Predict the selling price of the car.This dataset contains information about used cars listed on www.cardekho.com This data can be used for a lot of purposes such as price prediction to exemplify the use of linear regression in Machine Learning. The columns in the given dataset is as follows:  Car_Name Year Selling_Price Present_Price Kms_Driven Fuel_Type Seller_Type Transmission Owner
